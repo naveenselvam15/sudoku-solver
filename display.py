@@ -2,9 +2,19 @@ import cv2
 import numpy as np
 
 def imageOfSudoku(grid,solvingGrid):
+    """
+    this function returns the image of the sudoku with
+    grid of already given numbers in white color and
+    other computing numbers in green color.
+
+    parameters :
+
+    grid - grid of given numbers
+    solvingGrid - grid of numbers came up while backtracking algo runs
+
+    """
 
     img = np.ones((450, 450, 3), np.uint8)
-
     cv2.line(img, (0, 150), (450, 150), (255, 255, 255), 3)
     cv2.line(img, (0, 300), (450, 300), (255, 255, 255), 3)
     cv2.line(img, (150, 0), (150, 450), (255, 255, 255), 3)
